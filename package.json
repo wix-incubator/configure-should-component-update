@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/noomorph/configure-should-component-update.git"
+    "url": "git+https://github.com/wix-incubator/configure-should-component-update.git"
   },
   "keywords": [
     "shouldComponentUpdate",
@@ -41,7 +41,7 @@
   "author": "Yaroslav Serhieiev <yaroslavs@wix.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/noomorph/configure-should-component-update/issues"
+    "url": "https://github.com/wix-incubator/configure-should-component-update/issues"
   },
-  "homepage": "https://github.com/noomorph/configure-should-component-update#readme"
+  "homepage": "https://github.com/wix-incubator/configure-should-component-update#readme"
 }
