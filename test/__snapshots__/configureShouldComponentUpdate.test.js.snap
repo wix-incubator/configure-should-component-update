@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`configureShouldComponentUpdate(ComponentClass, options) unhappy paths should assert that the component class is valid 1`] = `"Invalid component class given to configureShouldComponentUpdate() function, please check the arguments."`;
+
+exports[`configureShouldComponentUpdate(ComponentClass, options) unhappy paths should assert that the passed options are an object 1`] = `"No options given to configureShouldComponentUpdate(Foo, undefined) function, please check the arguments."`;
+
+exports[`configureShouldComponentUpdate(ComponentClass, options) unhappy paths should assert that the props equality comparers correspond to the ComponentClass.propTypes 1`] = `"Unknown prop \\"aTypo\\" in class Foo. Make sure your custom equality comparer compares only known properties: known."`;
+
+exports[`configureShouldComponentUpdate(ComponentClass, options) unhappy paths should catch a case when args are accidentally swapped 1`] = `"Invalid component class given to configureShouldComponentUpdate() function, please check the arguments."`;
+
+exports[`configureShouldComponentUpdate(ComponentClass, options) unhappy paths should catch a case when args are accidentally swapped 2`] = `"Non-object options given to configureShouldComponentUpdate([object Object], fn Foo) function, please check the arguments."`;

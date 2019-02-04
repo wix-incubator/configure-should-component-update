@@ -1,0 +1,45 @@
+{
+  "name": "configure-should-component-update",
+  "version": "0.0.0",
+  "description": "Provides a function to configure React's shouldComponentUpdate() function in a declarative way",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "shallow-equal": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "babel-jest": "^24.0.0",
+    "jest": "^24.0.0",
+    "prop-types": "^15.6.2"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "resetMocks": true,
+    "globals": {
+      "__DEV__": true
+    },
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noomorph/configure-should-component-update.git"
+  },
+  "keywords": [
+    "shouldComponentUpdate",
+    "shallowEqual",
+    "shallow-equal"
+  ],
+  "author": "Yaroslav Serhieiev <yaroslavs@wix.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noomorph/configure-should-component-update/issues"
+  },
+  "homepage": "https://github.com/noomorph/configure-should-component-update#readme"
+}
