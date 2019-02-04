@@ -1,6 +1,6 @@
 {
   "name": "configure-should-component-update",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Provides a function to configure React's shouldComponentUpdate() function in a declarative way",
   "main": "index.js",
   "directories": {
