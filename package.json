@@ -12,10 +12,12 @@
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.3.0",
     "babel-jest": "^24.0.0",
+    "coveralls": "^3.0.2",
     "jest": "^24.0.0",
     "prop-types": "^15.6.2"
   },
   "scripts": {
+    "coveralls": "jest --coverage && cat coverage/lcov.info | coveralls",
     "test": "jest"
   },
   "jest": {
