@@ -16,3 +16,11 @@ install:
 script:
 - npm test
 - npm run coveralls
+deploy:
+  provider: npm
+  email: yaroslavs@wix.com
+  api_key:
+    secure: TYvcoYY6ESXwXjMGd3HQxtZVONDuVWmsobSLdpp4hdroKhUMkhiQiKhEKjE/VyP3y845TYFn+axWVWTeH/DnS7Eb0phA4ZUlFa7HwKuBCW4XLsxBX4zkgkK0lyncpAW7axqeKmb6nnH7c3p245uElYQYquH38gdvqZUrk46yhI85LsjQp/bTe8Y6f74P2BqPccGEt4KR1P96pnmdvH5HwTqo4PR3ykY1d2iTmx/1AY6R7HE+g5pv3Ym60ZGnxlD/x0lJsFtOvgaxNTIbVCHJWQLW4+K2fVV5+biXIpLalRXung0Sr4Tnp6S0lv0f+UjhKywDskq2Ua8LHhU+ly2MXBr6F4dG3WFjFuryQyd4Tx/lUOoLNGko31De97KJmldm0Z1eEIbfO2OvFcXCPR7mMP6h7mfc6dIovjhbIcVlcsBslK0KrVGcKa3Yx9nL4KhziHrPnGxNBw8SitFUR00YtFKp8D+phMgCL5AREub3sBHqdcW7+RkQVHFBhOAxw14lCBYzThpv7iG806Ypojl+PnY0YXNDSZbSF4WSB0ldYtXKQQP9xHwskvTRaubdBzgarEGOBPg+o/zpa4tK4o/zN81/UTZ2p+77I82LEMtQ/lRf1DpRMacnSMGCh2rTRZWd5+3VlDh6q61USG+P0Jn6rWQ/g979mmxYz7pjHkZpHJs=
+  on:
+    tags: true
+    repo: wix-incubator/configure-should-component-update
