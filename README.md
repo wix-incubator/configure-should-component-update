@@ -1,5 +1,11 @@
 # configure-should-component-update
 
+[![npm version](https://badge.fury.io/js/configure-should-component-update.svg)](https://badge.fury.io/js/configure-should-component-update)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.org/noomorph/configure-should-component-update.svg?branch=master)](https://travis-ci.org/noomorph/configure-should-component-update)
+[![Coverage Status](https://coveralls.io/repos/github/noomorph/configure-should-component-update/badge.svg?branch=master)](https://coveralls.io/github/noomorph/configure-should-component-update?branch=master)
+
+
 Provides a function to configure React's shouldComponentUpdate() function in a declarative way.
 
 ## Example
