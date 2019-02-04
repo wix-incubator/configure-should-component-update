@@ -6,7 +6,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/wix-incubator/configure-should-component-update/badge.svg?branch=master)](https://coveralls.io/github/wix-incubator/configure-should-component-update?branch=master)
 
 
-Provides a function to configure React's shouldComponentUpdate() function in a declarative way.
+Provides a function to build a customized React's shouldComponentUpdate() function in a declarative way.
 
 ## Example
 
