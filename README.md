@@ -5,6 +5,7 @@ Provides a function to configure React's shouldComponentUpdate() function in a d
 ## Example
 
 ```javascript
+  import React from 'react';
   import {configureShouldComponentUpdate} from 'configure-should-component-update';
 
   class Label extends React.Component {
@@ -12,6 +13,10 @@ Provides a function to configure React's shouldComponentUpdate() function in a d
       text: PropTypes.string,
       color: PropTypes.any,
     };
+
+    render() {
+      // ...
+    }
   }
 
   configureShouldComponentUpdate(Label, {
