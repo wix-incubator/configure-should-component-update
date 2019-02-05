@@ -4,7 +4,7 @@ module.exports = {
 
   strictEqual: require('./src/strictEqual'),
   shallowEqual: {
-    arrays: require('./src/shallowEqualArrays'),
-    objects: require('./src/shallowEqualObjects'),
+    arrays: require('shallow-equal/arrays'),
+    objects: require('shallow-equal/objects'),
   },
 };
