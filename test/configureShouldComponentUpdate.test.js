@@ -87,5 +87,22 @@ describe('configureShouldComponentUpdate(ComponentClass, options)', () => {
       expect(dummy.shouldComponentUpdate({text: 'text'}, {three: '3'})).toBe(true);
       expect(dummy.shouldComponentUpdate({text: 'TEXT'}, {three: '4'})).toBe(true);
     });
+
+    it('should pass props and state to given customizers if they are functions', () => {
+      const props = jest.fn(() => false), state = jest.fn(() => false);
+
+      configureShouldComponentUpdate(Dummy, { props, state });
+
+      const dummy = new Dummy(1, 2);
+      expect(dummy.shouldComponentUpdate(3, 4)).toBe(true);
+      expect(state).toHaveBeenCalledWith(2, 4, dummy);
+
+      state.mockReturnValue(true);
+      expect(dummy.shouldComponentUpdate(3, 4)).toBe(true);
+      expect(props).toHaveBeenCalledWith(1, 3, dummy);
+
+      props.mockReturnValue(true);
+      expect(dummy.shouldComponentUpdate(3, 4)).toBe(false);
+    });
   });
 });

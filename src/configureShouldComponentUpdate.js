@@ -8,20 +8,15 @@ function configureShouldComponentUpdate(ComponentClass, options) {
     assertThatEqualityComparersMatchPropTypes(ComponentClass, options.props);
   }
 
-  const arePropsShallowEqual = options.props
-    ? createStructuredEqualityComparer(options.props)
-    : shallowEqual;
-
-  const areStatesShallowEqual = options.state
-    ? createStructuredEqualityComparer(options.state)
-    : shallowEqual;
+  const areStatesEqual = createEqualityComparer(options.state);
+  const arePropsEqual = createEqualityComparer(options.props);
 
   function shouldComponentUpdate(nextProps, nextState) {
-    if (!areStatesShallowEqual(this.state, nextState, this)) {
+    if (!areStatesEqual(this.state, nextState, this)) {
       return true;
     }
 
-    if (!arePropsShallowEqual(this.props, nextProps, this)) {
+    if (!arePropsEqual(this.props, nextProps, this)) {
       return true;
     }
 
@@ -29,6 +24,13 @@ function configureShouldComponentUpdate(ComponentClass, options) {
   }
 
   ComponentClass.prototype.shouldComponentUpdate = shouldComponentUpdate;
+}
+
+function createEqualityComparer(option) {
+  if (!option) return shallowEqual;
+  if (typeof option === 'function') return option;
+
+  return createStructuredEqualityComparer(option);
 }
 
 function assertComponentClassIsValid(ComponentClass) {

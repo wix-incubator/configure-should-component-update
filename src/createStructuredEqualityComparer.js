@@ -1,16 +1,18 @@
 const isObject = require('./isObject');
 const strictEqual = require('./strictEqual');
 
-function createStructuredEqualityComparer(comparers) {
+function createStructuredEqualityComparer(comparers, options) {
   if (__DEV__) {
     if (!isObject(comparers)) {
       console.warn('The passed `comparers` to createStructuredEqualityComparer() should be an object.');
     }
   }
 
-  function structuredEqualityComparer(a, b) {
+  const defaultEqualityComparer = options && options.defaultEqualityComparer || strictEqual;
+
+  function structuredEqualityComparer(a, b, context) {
     if (!isObject(a) || !isObject(b)) {
-      return a === b;
+      return defaultEqualityComparer(a, b, undefined, a, b, context);
     }
 
     const keys = new Set([
@@ -19,8 +21,8 @@ function createStructuredEqualityComparer(comparers) {
     ]);
 
     for (const key of keys) {
-      const equalityComparer = comparers[key] || strictEqual;
-      if (!equalityComparer(a[key], b[key], key, a, b)) {
+      const equalityComparer = comparers[key] || defaultEqualityComparer;
+      if (!equalityComparer(a[key], b[key], key, a, b, context)) {
         return false;
       }
     }
