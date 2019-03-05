@@ -8,17 +8,17 @@ function configureShouldComponentUpdate(ComponentClass, options) {
     assertThatEqualityComparersMatchPropTypes(ComponentClass, options.props);
   }
 
-  const areStatesEqual = createEqualityComparer(options.state);
   const arePropsEqual = createEqualityComparer(options.props);
+  const areStatesEqual = createEqualityComparer(options.state);
 
   function shouldComponentUpdate(nextProps, nextState) {
     const next = { props: nextProps, state: nextState };
 
-    if (!areStatesEqual(this.state, nextState, 'state', this, next)) {
+    if (!arePropsEqual(this.props, nextProps, 'props', this, next)) {
       return true;
     }
 
-    if (!arePropsEqual(this.props, nextProps, 'props', this, next)) {
+    if (!areStatesEqual(this.state, nextState, 'state', this, next)) {
       return true;
     }
 
@@ -54,7 +54,7 @@ function assertOptionsAreAnObject(ComponentClass, options) {
 function assertThatEqualityComparersMatchPropTypes(ComponentClass, propsEqualityComparers) {
   const {propTypes} = ComponentClass;
 
-  if (propTypes && propsEqualityComparers) {
+  if (propTypes && propsEqualityComparers && typeof propsEqualityComparers !== 'function') {
     const className = getComponentClassName(ComponentClass);
 
     for (const key of Object.keys(propsEqualityComparers)) {
@@ -67,7 +67,7 @@ function assertThatEqualityComparersMatchPropTypes(ComponentClass, propsEquality
 }
 
 function getComponentClassName(ComponentClass) {
-  return ComponentClass && (ComponentClass.displayName || ComponentClass.name) || String(ComponentClass);
+  return ComponentClass && (ComponentClass.displayName || ComponentClass.name) || 'Component';
 }
 
 module.exports = configureShouldComponentUpdate;
