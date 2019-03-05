@@ -60,6 +60,28 @@ describe('configureShouldComponentUpdate(ComponentClass, options)', () => {
       };
     });
 
+    it('should provide declarative interface for comparing props and state with a rich comparator signature', () => {
+      const text = jest.fn(() => true), checked = jest.fn(() => true);
+
+      configureShouldComponentUpdate(Dummy, {
+        props: { text },
+        state: { checked },
+      });
+
+      const oldProps = {text: 'old'};
+      const oldState = {checked: false};
+
+      const dummy = new Dummy(oldProps, oldState);
+
+      const newProps = {text: 'new'};
+      const newState = {checked: true};
+
+      expect(dummy.shouldComponentUpdate(newProps, newState)).toBe(true);
+
+      expect(text).toHaveBeenCalledWith('old', 'new', 'text', oldProps, newProps);
+      expect(checked).toHaveBeenCalledWith(false, true, 'checked', oldState, oldState);
+    });
+
     it('should shallowly check state for equality if no customizers given only for props', () => {
       configureShouldComponentUpdate(Dummy, {
         props: {

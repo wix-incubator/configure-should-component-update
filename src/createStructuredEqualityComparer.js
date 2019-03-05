@@ -10,9 +10,9 @@ function createStructuredEqualityComparer(comparers, options) {
 
   const defaultEqualityComparer = options && options.defaultEqualityComparer || strictEqual;
 
-  function structuredEqualityComparer(a, b, context) {
+  function structuredEqualityComparer(a, b, key, contextA, contextB) {
     if (!isObject(a) || !isObject(b)) {
-      return defaultEqualityComparer(a, b, undefined, a, b, context);
+      return defaultEqualityComparer(a, b, key, contextA, contextB);
     }
 
     const keys = new Set([
@@ -22,7 +22,7 @@ function createStructuredEqualityComparer(comparers, options) {
 
     for (const key of keys) {
       const equalityComparer = comparers[key] || defaultEqualityComparer;
-      if (!equalityComparer(a[key], b[key], key, a, b, context)) {
+      if (!equalityComparer(a[key], b[key], key, a, b)) {
         return false;
       }
     }

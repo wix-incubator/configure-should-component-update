@@ -12,11 +12,13 @@ function configureShouldComponentUpdate(ComponentClass, options) {
   const arePropsEqual = createEqualityComparer(options.props);
 
   function shouldComponentUpdate(nextProps, nextState) {
-    if (!areStatesEqual(this.state, nextState, this)) {
+    const next = { props: nextProps, state: nextState };
+
+    if (!areStatesEqual(this.state, nextState, 'state', this, next)) {
       return true;
     }
 
-    if (!arePropsEqual(this.props, nextProps, this)) {
+    if (!arePropsEqual(this.props, nextProps, 'props', this, next)) {
       return true;
     }
 
