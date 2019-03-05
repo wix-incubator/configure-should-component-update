@@ -3,14 +3,14 @@ const strictEqual = require('./strictEqual');
 
 function createStructuredEqualityComparer(comparers) {
   if (__DEV__) {
-    if (!isObject(comparers)) {
-      console.warn('The passed `comparers` to createStructuredEqualityComparer() should be an object.');
+    if (!isObject(comparers) || typeof comparers === 'function') {
+      console.warn('The passed `comparers` to createStructuredEqualityComparer() should be a plain object.');
     }
   }
 
   function structuredEqualityComparer(a, b) {
     if (!isObject(a) || !isObject(b)) {
-      return a === b;
+      return strictEqual(a, b);
     }
 
     const keys = new Set([

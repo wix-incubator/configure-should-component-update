@@ -8,4 +8,4 @@ exports[`configureShouldComponentUpdate(ComponentClass, options) unhappy paths s
 
 exports[`configureShouldComponentUpdate(ComponentClass, options) unhappy paths should catch a case when args are accidentally swapped 1`] = `"Invalid component class given to configureShouldComponentUpdate() function, please check the arguments."`;
 
-exports[`configureShouldComponentUpdate(ComponentClass, options) unhappy paths should catch a case when args are accidentally swapped 2`] = `"Non-object options given to configureShouldComponentUpdate([object Object], fn Foo) function, please check the arguments."`;
+exports[`configureShouldComponentUpdate(ComponentClass, options) unhappy paths should catch a case when args are accidentally swapped 2`] = `"Non-object options given to configureShouldComponentUpdate(Component, fn Foo) function, please check the arguments."`;

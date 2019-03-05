@@ -7,6 +7,12 @@ describe('createStructuredEqualityComparer', () => {
     expect(console.warn.mock.calls[0][0]).toMatchSnapshot();
   });
 
+  it('should warn on a function argument', () => {
+    jest.spyOn(console, 'warn').mockImplementation(() => {});
+    createStructuredEqualityComparer(jest.fn());
+    expect(console.warn.mock.calls[0][0]).toMatchSnapshot();
+  });
+
   describe('should create a comparer, which', () => {
     it('executes a strict equality check for non-objects', () => {
       const comparer = createStructuredEqualityComparer({});
@@ -15,7 +21,7 @@ describe('createStructuredEqualityComparer', () => {
       expect(comparer(null, undefined)).toBe(false);
     });
 
-    it('pases arguments (value1, value2, key, obj1, obj2) into a property equality comparer', () => {
+    it('passes arguments (value1, value2, key, obj1, obj2) into a property equality comparer', () => {
       const spy = jest.fn().mockReturnValue(true);
       const a = { prop: 'a' };
       const b = { prop: 'b' };

@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`createStructuredEqualityComparer should warn on a non-object argument 1`] = `"The passed \`comparers\` to createStructuredEqualityComparer() should be an object."`;
+exports[`createStructuredEqualityComparer should warn on a function argument 1`] = `"The passed \`comparers\` to createStructuredEqualityComparer() should be a plain object."`;
+
+exports[`createStructuredEqualityComparer should warn on a non-object argument 1`] = `"The passed \`comparers\` to createStructuredEqualityComparer() should be a plain object."`;
