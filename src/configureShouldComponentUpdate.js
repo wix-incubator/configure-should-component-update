@@ -68,7 +68,7 @@ function assertThatEqualityComparersMatchPropTypes(ComponentClass, propsEquality
     for (const key of Object.keys(propsEqualityComparers)) {
       if (!propTypes[key]) {
         console.warn(`Unknown prop "${key}" in class ${className}. `
-            + `Make sure your custom equality comparer compares only known properties: ${Object.keys(propTypes)}.`);
+          + `Make sure your custom equality comparer compares only known properties: ${Object.keys(propTypes)}.`);
       }
     }
   }
