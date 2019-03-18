@@ -27,9 +27,9 @@ Provides a function to build a customized React's shouldComponentUpdate() functi
 
   configureShouldComponentUpdate(Label, {
     props: {
-      text: (prev, next, key, prevProps, nextProps) => a == b,
+      text: (prev, next, { key, props, state, nextProps, nextState }) => a == b,
     },
-    state(prevState, nextState, key, element, { props: nextProps }) {
+    state(prevState, nextState, { props, nextProps }) {
       return prevState.pressed === nextState.pressed && !nextProps.disabled;
     }
   });
