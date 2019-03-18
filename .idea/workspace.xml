@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9b16ec4a-d57c-4fa9-a4af-ea0e37543487" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/configureShouldComponentUpdate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/configureShouldComponentUpdate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/createStructuredEqualityComparer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/createStructuredEqualityComparer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/configureShouldComponentUpdate.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/configureShouldComponentUpdate.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/createStructuredEqualityComparer.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/createStructuredEqualityComparer.test.js" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="904575240">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="js" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JavaScript" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="js" value="4135" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JavaScript" value="4135" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/configureShouldComponentUpdate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/configureShouldComponentUpdate.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="85" column="6" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/index.test.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/isObject.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/strictEqual.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/createStructuredEqualityComparer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/createStructuredEqualityComparer.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/configureShouldComponentUpdate.js" />
+        <option value="$PROJECT_DIR$/src/createStructuredEqualityComparer.js" />
+        <option value="$PROJECT_DIR$/test/createStructuredEqualityComparer.test.js" />
+        <option value="$PROJECT_DIR$/test/configureShouldComponentUpdate.test.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1924" />
+    <option name="y" value="167" />
+    <option name="width" value="656" />
+    <option name="height" value="496" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="configure-should-component-update" type="b2602c69:ProjectViewProjectNode" />
+              <item name="configure-should-component-update" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="configure-should-component-update" type="b2602c69:ProjectViewProjectNode" />
+              <item name="configure-should-component-update" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="configure-should-component-update" type="b2602c69:ProjectViewProjectNode" />
+              <item name="configure-should-component-update" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Jest.configureShouldComponentUpdate(ComponentClass, options).should add to the prototype a shouldComponentUpdate function, which.should provide declarative interface for comparing props and state with a rich comparator signature">
+    <configuration name="configureShouldComponentUpdate(ComponentClass, options).should add to the prototype a shouldComponentUpdate function, which.should provide declarative interface for comparing props and state with a rich comparator signature" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/test/configureShouldComponentUpdate.test.js" />
+      <test-names>
+        <test-name value="configureShouldComponentUpdate(ComponentClass, options)" />
+        <test-name value="should add to the prototype a shouldComponentUpdate function, which" />
+        <test-name value="should provide declarative interface for comparing props and state with a rich comparator signature" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="createStructuredEqualityComparer" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/test/createStructuredEqualityComparer.test.js" />
+      <test-names>
+        <test-name value="createStructuredEqualityComparer" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Jest.createStructuredEqualityComparer" />
+      <item itemvalue="Jest.configureShouldComponentUpdate(ComponentClass, options).should add to the prototype a shouldComponentUpdate function, which.should provide declarative interface for comparing props and state with a rich comparator signature" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.configureShouldComponentUpdate(ComponentClass, options).should add to the prototype a shouldComponentUpdate function, which.should provide declarative interface for comparing props and state with a rich comparator signature" />
+        <item itemvalue="Jest.createStructuredEqualityComparer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b16ec4a-d57c-4fa9-a4af-ea0e37543487" name="Default Changelist" comment="" />
+      <created>1552889621115</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552889621115</updated>
+      <workItem from="1552889622245" duration="1843000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="createStructuredEqualityComparer - 2019.03.18 at 08h 29m 00s.xml">
+      <configuration name="createStructuredEqualityComparer" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="configureShouldComponentUpdate(ComponentClass,_options)_should_add_to_the_prototype_a_shouldComponentUpdate_function,_which_should_provide_declarative_interface_for_comparing_props_and_state_with_a_rich_comparator_signature - 2019.03.18 at 08h 43m 01s.xml">
+      <configuration name="configureShouldComponentUpdate(ComponentClass, options).should add to the prototype a shouldComponentUpdate function, which.should provide declarative interface for comparing props and state with a rich comparator signature" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="configureShouldComponentUpdate(ComponentClass,_options)_should_add_to_the_prototype_a_shouldComponentUpdate_function,_which_should_provide_declarative_interface_for_comparing_props_and_state_with_a_rich_comparator_signature - 2019.03.18 at 08h 43m 26s.xml">
+      <configuration name="configureShouldComponentUpdate(ComponentClass, options).should add to the prototype a shouldComponentUpdate function, which.should provide declarative interface for comparing props and state with a rich comparator signature" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+    <history-entry file="configureShouldComponentUpdate(ComponentClass,_options)_should_add_to_the_prototype_a_shouldComponentUpdate_function,_which_should_provide_declarative_interface_for_comparing_props_and_state_with_a_rich_comparator_signature - 2019.03.18 at 08h 44m 12s.xml">
+      <configuration name="configureShouldComponentUpdate(ComponentClass, options).should add to the prototype a shouldComponentUpdate function, which.should provide declarative interface for comparing props and state with a rich comparator signature" configurationId="JavaScriptTestRunnerJest" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1843000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
+    <layout>
+      <window_info id="npm" side_tool="true" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20889409" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32969603" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3998441" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/test/configureShouldComponentUpdate.test.js</url>
+          <line>85</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test/createStructuredEqualityComparer.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/index.test.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/isObject.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/strictEqual.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/createStructuredEqualityComparer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/configureShouldComponentUpdate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/configureShouldComponentUpdate.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="85" column="6" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

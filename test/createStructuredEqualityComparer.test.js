@@ -29,7 +29,7 @@ describe('createStructuredEqualityComparer', () => {
       const comparer = createStructuredEqualityComparer({ prop: spy });
 
       expect(comparer(a, b)).toBe(true);
-      expect(spy).toHaveBeenCalledWith('a', 'b', 'prop', a, b);
+      expect(spy).toHaveBeenCalledWith('a', 'b', { key: 'prop' });
 
       spy.mockReturnValue(false);
       expect(comparer(a, b)).toBe(false);
