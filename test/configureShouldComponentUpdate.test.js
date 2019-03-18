@@ -1,6 +1,6 @@
 const PropTypes = require('prop-types');
 const configureShouldComponentUpdate = require('../src/configureShouldComponentUpdate');
-
+const safe = require('./utils/safetyBelt');
 const noop = () => {};
 
 describe('configureShouldComponentUpdate(ComponentClass, options)', () => {
@@ -61,12 +61,16 @@ describe('configureShouldComponentUpdate(ComponentClass, options)', () => {
     });
 
     it('should provide declarative interface for comparing props and state with a rich comparator signature', () => {
-      const text = jest.fn(() => true), checked = jest.fn(() => true);
+      const config = {
+        props: {
+          text: safe(jest.fn(() => true)),
+        },
+        state: {
+          checked: safe(jest.fn(() => true)),
+        },
+      };
 
-      configureShouldComponentUpdate(Dummy, {
-        props: { text },
-        state: { checked },
-      });
+      configureShouldComponentUpdate(Dummy, config);
 
       const props = {text: 'old'};
       const state = {checked: false};
@@ -83,14 +87,14 @@ describe('configureShouldComponentUpdate(ComponentClass, options)', () => {
         nextProps,
       };
 
-      expect(checked).toHaveBeenCalledWith(false, true, { ...expectedContext, key: 'state.checked' });
-      expect(text).toHaveBeenCalledWith('old', 'new', { ...expectedContext, key: 'props.text' });
+      expect(config.props.text).toHaveBeenCalledWith('old', 'new', { ...expectedContext, key: 'props.text' });
+      expect(config.state.checked).toHaveBeenCalledWith(false, true, { ...expectedContext, key: 'state.checked' });
     });
 
     it('should provide extensible interface for comparing props and state manually', () => {
       const config = {
-        props: jest.fn(() => true),
-        state: jest.fn(() => true),
+        props: safe(jest.fn(() => true)),
+        state: safe(jest.fn(() => true)),
       };
 
       configureShouldComponentUpdate(Dummy, config);
@@ -141,7 +145,7 @@ describe('configureShouldComponentUpdate(ComponentClass, options)', () => {
     });
 
     it('should pass props and state to given customizers if they are functions', () => {
-      const props = jest.fn(), state = jest.fn();
+      const props = safe(jest.fn()), state = safe(jest.fn());
       configureShouldComponentUpdate(Dummy, { props, state });
       const dummy = new Dummy(1, 2);
 
@@ -161,7 +165,7 @@ describe('configureShouldComponentUpdate(ComponentClass, options)', () => {
       state.mockReturnValue(true);
 
       expect(dummy.shouldComponentUpdate(3, 4)).toBe(true);
-      expect(props).toHaveBeenCalledWith(2, 4, {
+      expect(props).toHaveBeenCalledWith(1, 3, {
         props: 1,
         state: 2,
         nextProps: 3,
