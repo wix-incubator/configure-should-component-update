@@ -7,14 +7,14 @@
     "test": "test"
   },
   "dependencies": {
-    "shallow-equal": "^1.0.0"
+    "shallow-equal": "^1.1.0"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.3.0",
-    "babel-jest": "^24.0.0",
-    "coveralls": "^3.0.2",
-    "jest": "^24.0.0",
-    "prop-types": "^15.6.2"
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "babel-jest": "^24.5.0",
+    "coveralls": "^3.0.3",
+    "jest": "^24.5.0",
+    "prop-types": "^15.7.2"
   },
   "scripts": {
     "coveralls": "jest --coverage && cat coverage/lcov.info | coveralls",

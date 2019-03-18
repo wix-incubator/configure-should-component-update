@@ -12,13 +12,21 @@ function configureShouldComponentUpdate(ComponentClass, options) {
   const areStatesEqual = createEqualityComparer(options.state);
 
   function shouldComponentUpdate(nextProps, nextState) {
-    const next = { props: nextProps, state: nextState };
+    const context = {
+      key: '',
+      props: this.props,
+      state: this.state,
+      nextProps,
+      nextState,
+    };
 
-    if (!arePropsEqual(this.props, nextProps, 'props', this, next)) {
+    context.key = 'props';
+    if (!arePropsEqual(this.props, nextProps, context)) {
       return true;
     }
 
-    if (!areStatesEqual(this.state, nextState, 'state', this, next)) {
+    context.key = 'state';
+    if (!areStatesEqual(this.state, nextState, context)) {
       return true;
     }
 
@@ -60,7 +68,7 @@ function assertThatEqualityComparersMatchPropTypes(ComponentClass, propsEquality
     for (const key of Object.keys(propsEqualityComparers)) {
       if (!propTypes[key]) {
         console.warn(`Unknown prop "${key}" in class ${className}. `
-            + `Make sure your custom equality comparer compares only known properties: ${Object.keys(propTypes)}.`);
+          + `Make sure your custom equality comparer compares only known properties: ${Object.keys(propTypes)}.`);
       }
     }
   }

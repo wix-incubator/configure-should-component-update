@@ -1,6 +1,6 @@
 const PropTypes = require('prop-types');
 const configureShouldComponentUpdate = require('../src/configureShouldComponentUpdate');
-
+const safe = require('./utils/safetyBelt');
 const noop = () => {};
 
 describe('configureShouldComponentUpdate(ComponentClass, options)', () => {
@@ -61,40 +61,59 @@ describe('configureShouldComponentUpdate(ComponentClass, options)', () => {
     });
 
     it('should provide declarative interface for comparing props and state with a rich comparator signature', () => {
-      const text = jest.fn(() => true), checked = jest.fn(() => true);
+      const config = {
+        props: {
+          text: safe(jest.fn(() => true)),
+        },
+        state: {
+          checked: safe(jest.fn(() => true)),
+        },
+      };
 
-      configureShouldComponentUpdate(Dummy, {
-        props: { text },
-        state: { checked },
-      });
+      configureShouldComponentUpdate(Dummy, config);
 
-      const oldProps = {text: 'old'};
-      const oldState = {checked: false};
+      const props = {text: 'old'};
+      const state = {checked: false};
+      const nextProps = {text: 'new'};
+      const nextState = {checked: true};
+      const dummy = new Dummy(props, state);
 
-      const dummy = new Dummy(oldProps, oldState);
+      expect(dummy.shouldComponentUpdate(nextProps, nextState)).toBe(false);
 
-      const newProps = {text: 'new'};
-      const newState = {checked: true};
+      const expectedContext = {
+        state,
+        props,
+        nextState,
+        nextProps,
+      };
 
-      expect(dummy.shouldComponentUpdate(newProps, newState)).toBe(false);
-      expect(text).toHaveBeenCalledWith('old', 'new', 'text', oldProps, newProps);
-      expect(checked).toHaveBeenCalledWith(false, true, 'checked', oldState, newState);
+      expect(config.props.text).toHaveBeenCalledWith('old', 'new', { ...expectedContext, key: 'props.text' });
+      expect(config.state.checked).toHaveBeenCalledWith(false, true, { ...expectedContext, key: 'state.checked' });
     });
 
     it('should provide extensible interface for comparing props and state manually', () => {
-      const props = jest.fn(() => true), state = jest.fn(() => true);
+      const config = {
+        props: safe(jest.fn(() => true)),
+        state: safe(jest.fn(() => true)),
+      };
 
-      configureShouldComponentUpdate(Dummy, { props, state });
+      configureShouldComponentUpdate(Dummy, config);
 
-      const oldProps = {text: 'old'}, newProps = {text: 'new'};
-      const oldState = {checked: false}, newState = {checked: true};
+      const props = {text: 'old'}, nextProps = {text: 'new'};
+      const state = {checked: false}, nextState = {checked: true};
 
-      const dummy = new Dummy(oldProps, oldState);
-      expect(dummy.shouldComponentUpdate(newProps, newState)).toBe(false);
+      const dummy = new Dummy(props, state);
+      expect(dummy.shouldComponentUpdate(nextProps, nextState)).toBe(false);
 
-      const next = { props: newProps, state: newState };
-      expect(props).toHaveBeenCalledWith(oldProps, newProps, 'props', dummy, expect.objectContaining(next));
-      expect(state).toHaveBeenCalledWith(oldState, newState, 'state', dummy, expect.objectContaining(next));
+      const expectedContext = {
+        state,
+        props,
+        nextState,
+        nextProps,
+      };
+
+      expect(config.props).toHaveBeenCalledWith(props, nextProps, { ...expectedContext, key: 'props' });
+      expect(config.state).toHaveBeenCalledWith(state, nextState, { ...expectedContext, key: 'state' });
     });
 
     it('should shallowly check state for equality if no customizers given only for props', () => {
@@ -126,7 +145,7 @@ describe('configureShouldComponentUpdate(ComponentClass, options)', () => {
     });
 
     it('should pass props and state to given customizers if they are functions', () => {
-      const props = jest.fn(), state = jest.fn();
+      const props = safe(jest.fn()), state = safe(jest.fn());
       configureShouldComponentUpdate(Dummy, { props, state });
       const dummy = new Dummy(1, 2);
 
@@ -134,13 +153,25 @@ describe('configureShouldComponentUpdate(ComponentClass, options)', () => {
       state.mockReturnValue(false);
 
       expect(dummy.shouldComponentUpdate(3, 4)).toBe(true);
-      expect(state).toHaveBeenCalledWith(2, 4, 'state', dummy, jasmine.objectContaining({ props: 3, state: 4 }));
+      expect(state).toHaveBeenCalledWith(2, 4, {
+        props: 1,
+        state: 2,
+        nextProps: 3,
+        nextState: 4,
+        key: 'state',
+      });
 
       props.mockReturnValue(false);
       state.mockReturnValue(true);
 
       expect(dummy.shouldComponentUpdate(3, 4)).toBe(true);
-      expect(props).toHaveBeenCalledWith(1, 3, 'props', dummy, jasmine.objectContaining({ props: 3, state: 4 }));
+      expect(props).toHaveBeenCalledWith(1, 3, {
+        props: 1,
+        state: 2,
+        nextProps: 3,
+        nextState: 4,
+        key: 'props',
+      });
 
       props.mockReturnValue(true);
       state.mockReturnValue(true);
